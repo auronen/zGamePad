@@ -4,6 +4,10 @@ META
   MergeMode = true;
 };
 
+namespace zPE
+{
+    const string EMPTY_STRING = "";
+};
 
 instance MENU_OPTIONS(C_MENU_DEF)
 {
@@ -17,11 +21,15 @@ instance MENUITEM_OPT_UNION(C_MENU_ITEM)
   onselaction[0]   = SEL_ACTION_STARTMENU;
   onselaction_s[0] = "MENU_OPT_UNION";
   Flags            = Flags | IT_TXT_CENTER;
-  text[0]          = Str_GetLocalizedString(
+  text[0]          = Str_GetLocalizedStringEx( 
     "Union & Плагины",
     "Union & Plugins",
     "Union & Plugins",
-    "Union & Plugins"
+    "Union & Plugins",
+    "Union & Pluginy",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -80,11 +88,15 @@ instance UNION_MENUITEM_TITLE(C_MENU_ITEM_DEF)
   dimx    = 8100;
   flags   = flags & ~IT_SELECTABLE;
   flags   = flags | IT_TXT_CENTER;
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Список",
     "LIst",
     "LIsta",
-    "LIste"
+    "LIste",
+    "Seznam",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -96,10 +108,14 @@ instance UNION_MENUITEM_BACK(C_MENU_ITEM_DEF)
   dimx           = 6192;
   onselaction[0] = SEL_ACTION_BACK;
   flags          = flags | IT_TXT_CENTER;
-  text[0]        = Str_GetLocalizedString(
+  text[0]        = Str_GetLocalizedStringEx(
     "НАЗАД",
     "BACK",
     "ZURÜCK",
-    "WRÓĆ"
+    "WRÓĆ",
+    "ZPĚT",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };

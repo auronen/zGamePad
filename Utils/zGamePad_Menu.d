@@ -114,11 +114,15 @@ instance ZGAMEPAD_MENUITEM_HEADLINE(C_MENU_ITEM_DEF)
   dimx    = 8100;
   flags   = flags & ~IT_SELECTABLE;
   flags   = flags | IT_TXT_CENTER;
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "ZGAMEPAD НАСТРОЙКИ",
     "ZGAMEPAD SETTINGS",
     "ZGAMEPAD EINSTELLUNGEN",
-    "USTAWIENIA ZGAMEPAD"
+    "USTAWIENIA ZGAMEPAD",
+    "NASTAVENÍ ZGAMEPAD",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -128,11 +132,15 @@ instance ZGAMEPAD_MENUITEM_ENABLED(C_MENU_ITEM)
   C_ZGAMEPAD_MENU_ITEM_TEXT_BASE();
   posy += ZGAMEPAD_MENU_DY * 0;
   
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Включен",
     "Enabled",
     "Aktiviert",
-    "Włączony"
+    "Włączony",
+    "Zapnout",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -144,11 +152,15 @@ instance ZGAMEPAD_MENUITEM_ENABLED_CHOICE(C_MENU_ITEM_DEF)
   
   onchgsetoption        = "Enabled";
   onchgsetoptionsection = "ZGAMEPAD";
-  text[0]               = Str_GetLocalizedString(
+  text[0]               = Str_GetLocalizedStringEx(
     "нет|да",
     "no|yes",
-    "Ja|Nein",
-    "nie|tak"
+    "Nein|Ja",
+    "nie|tak",
+    "ne|ano",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -158,11 +170,15 @@ instance ZGAMEPAD_MENUITEM_GAMEPAD_ID(C_MENU_ITEM_DEF)
   C_ZGAMEPAD_MENU_ITEM_TEXT_BASE();
   posy += ZGAMEPAD_MENU_DY * 1;
   
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Номер контроллера",
     "Controller ID",
     "Controller ID",
-    "ID Kontrolera"
+    "ID Kontrolera",
+    "ID ovladače",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -183,11 +199,15 @@ instance ZGAMEPAD_MENUITEM_SENSITIVITY(C_MENU_ITEM_DEF)
   C_ZGAMEPAD_MENU_ITEM_TEXT_BASE();
   posy += ZGAMEPAD_MENU_DY * 2;
   
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Чувствительность",
     "Sensitivity",
     "Empfindlichkeit",
-    "Czułość"
+    "Czułość",
+    "Citlivost",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -208,11 +228,15 @@ instance ZGAMEPAD_MENUITEM_HINTS(C_MENU_ITEM_DEF)
   C_ZGAMEPAD_MENU_ITEM_TEXT_BASE();
   posy += ZGAMEPAD_MENU_DY * 3;
 
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Подсказки",
     "Hints",
     "Hinweise",
-    "Podpowiedzi"
+    "Podpowiedzi",
+    "Nápověda",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -224,11 +248,15 @@ instance ZGAMEPAD_MENUITEM_HINTS_CHOICE(C_MENU_ITEM_DEF)
   
   onchgsetoption        = "HintsEnabled";
   onchgsetoptionsection = "ZGAMEPAD";
-  text[0]               = Str_GetLocalizedString(
+  text[0]               = Str_GetLocalizedStringEx(
     "выкл|вкл",
     "off|on",
     "Aus|Ein",
-    "wyłączone|włączone"
+    "wyłączone|włączone",
+    "vypnout|zapnout",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -239,11 +267,15 @@ instance ZGAMEPAD_MENUITEM_HINTS_SCHEME(C_MENU_ITEM_DEF)
   posy += ZGAMEPAD_MENU_DY * 4;
 
   backpic = ZGAMEPAD_MENU_ITEM_BACK_PIC;
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Вид подсказок",
     "Hint icons",
     "Hinweisicons",
-    "Ikony podpowiedzi"
+    "Ikony podpowiedzi",
+    "Pomocné ikony",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -264,11 +296,15 @@ instance ZGAMEPAD_MENUITEM_HINTS_SCALE(C_MENU_ITEM_DEF)
   C_ZGAMEPAD_MENU_ITEM_TEXT_BASE();
   posy += ZGAMEPAD_MENU_DY * 5;
 
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Размер подсказок",
     "Hint scale",
     "Hinweisscalierung",
-    "Rozmiar podpowiedzi"
+    "Rozmiar podpowiedzi",
+    "Velikost nápovědy",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -289,11 +325,15 @@ instance ZGAMEPAD_MENUITEM_HINTS_TRANSPARENCY(C_MENU_ITEM_DEF)
   C_ZGAMEPAD_MENU_ITEM_TEXT_BASE();
   posy += ZGAMEPAD_MENU_DY * 6;
   
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Прозрачность подсказок",
     "Hints transparency",
     "Hinweisdurchsichtigkeit",
-    "Przeźroczystość podpowiedzi"
+    "Przeźroczystość podpowiedzi",
+    "Průhlednost nápovědy",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -318,11 +358,15 @@ instance ZGAMEPAD_MENUITEM_OPEN_LINK(C_MENU_ITEM_DEF)
   onselaction[0]   = SEL_ACTION_UNDEF;
   oneventaction[1] = gamepad_open_project_link;
   flags            = flags | IT_TXT_CENTER;
-  text[0]          = Str_GetLocalizedString(
+  text[0]          = Str_GetLocalizedStringEx(
     "Открыть страницу проекта",
     "Open project page",
     "Projektseite öffnen",
-    "Otwórz stronę projektu"
+    "Otwórz stronę projektu",
+    "Otevřít stránky projektu",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -367,11 +411,15 @@ instance ZGAMEPAD_MENUITEM_DISCONNECTED_HEADLINE(C_MENU_ITEM_DEF)
   dimx     = 8100;
   flags    = flags & ~IT_SELECTABLE;
   flags    = flags | IT_TXT_CENTER;
-  text[0]  = Str_GetLocalizedString(
+  text[0]  = Str_GetLocalizedStringEx(
     "Контроллер был отключен!",
     "Controller has been disconnected!",
     "Controller wurde getrennt!",
-    "Kontroler został odłączony!"
+    "Kontroler został odłączony!",
+    "Ovladač byl odpojen!",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -386,11 +434,15 @@ instance ZGAMEPAD_MENUITEM_DISCONNECTED_MESSAGE_01(C_MENU_ITEM_DEF)
   flags    = flags & ~IT_SELECTABLE;
   flags    = flags | IT_TXT_CENTER;
   fontname = MENU_FONT_SMALL;
-  text[0]  = Str_GetLocalizedString(
+  text[0]  = Str_GetLocalizedStringEx(
     "Подключите контроллер и нажмите Продолжить.",
     "Connect the controller and click Continue.",
     "Schließen Sie den Controller an und klicken Sie auf Weiter.",
-    "Podłącz kontroler i wciśnij Kontynuuj."
+    "Podłącz kontroler i wciśnij Kontynuuj.",
+    "Připojte ovladač a stiskněte tlačítko pokračovat",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
 
@@ -399,10 +451,14 @@ instance UNION_MENUITEM_DISCONNECTED_BACK(C_MENU_ITEM)
   backpic  = ZGAMEPAD_MENU_SHADOW;
   UNION_MENUITEM_BACK();
   posy    = 5000;
-  text[0] = Str_GetLocalizedString(
+  text[0] = Str_GetLocalizedStringEx(
     "Продолжить",
     "Continue",
     "ZURÜCK",
-    "WRÓĆ"
+    "WRÓĆ",
+    "Pokračovat",
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING,
+    zPE:EMPTY_STRING
   );
 };
